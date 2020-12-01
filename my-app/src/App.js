@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
+import { Cardlist } from './component/list/list.component';
 
 class App extends Component {
   constructor() {
@@ -19,7 +20,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        { this.state.friend.map(friend => <h3 key={friend.id}>{friend.first_name}</h3>)}
+       <Cardlist friend={this.state.friend} />  
+
 
       </div>
 
